@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="MarvelApp" ng-controller="appController">
+<head>
+	<title>{{ Page.title() }}</title>
+
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/angularjs-slider/dist/rzslider.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="main__navbar" class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Marvel API App</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li ng-class="getClass('/')"><a href="/angular/#!/">Home</a></li>
+				<li ng-class="getClass('/characters')"><a href="/angular/#!/characters">Characters</a></li>
+				<li ng-class="getClass('/comics')"><a href="/angular/#!/comics">Comics</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+
+
+<div id="main">
+	<div class="page {{pageClass}}" ng-view></div>
+</div>
+
+<!-- Libraries -->
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-md5/angular-md5.min.js"></script>
+<script type="text/javascript" src="node_modules/angularjs-slider/dist/rzslider.min.js"></script>
+
+<!-- App -->
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/app.constants.js"></script>
+<script type="text/javascript" src="app/app.factory.js"></script>
+<script type="text/javascript" src="app/app.ctrl.js"></script>
+<script type="text/javascript" src="app/home/home.ctrl.js"></script>
+<script type="text/javascript" src="app/characters/characters.ctrl.js"></script>
+<script type="text/javascript" src="app/characters/character.ctrl.js"></script>
+<script type="text/javascript" src="app/comics/comics.ctrl.js"></script>
+
+</body>
+</html>

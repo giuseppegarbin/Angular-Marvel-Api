@@ -1,0 +1,34 @@
+{
+  "name": "angular-marvel-api",
+  "version": "1.0.0",
+  "description": "Practice again with AngularJS and API... Are you a fan of Marvel heroes?!",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-md5": "^0.1.10",
+    "angular-route": "^1.6.5",
+    "angularjs-slider": "^6.2.3",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuseppegarbin/Angular-Marvel-Api.git"
+  },
+  "keywords": [
+    "angular",
+    "api",
+    "marvel"
+  ],
+  "author": "Giuseppe Garbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giuseppegarbin/Angular-Marvel-Api/issues"
+  },
+  "homepage": "https://github.com/giuseppegarbin/Angular-Marvel-Api#readme"
+}

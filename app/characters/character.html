@@ -1,0 +1,56 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-offset-2">
+			<h1>{{character.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-3 col-sm-offset-2">
+			<img class="img-responsive" ng-src="{{character.thumbnail.path}}/portrait_uncanny.{{character.thumbnail.extension}}" ng-alt="{{character.name}}">
+		</div>
+		<div class="col-xs-12 col-sm-5">
+			<p class="lead" ng-if="character.description !== ''">{{character.description}}</p>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 text-center">
+					<div class="panel panel-default">
+						<div class="panel-heading">Comics</div>
+						<div class="panel-body">
+							<h2>{{character.comics.available | number}}</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 text-center">
+					<div class="panel panel-default">
+						<div class="panel-heading">Stories</div>
+						<div class="panel-body">
+							<h2>{{character.stories.available | number}}</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 text-center">
+					<div class="panel panel-default">
+						<div class="panel-heading">Series</div>
+						<div class="panel-body">
+							<h2>{{character.series.available | number}}</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 text-center">
+					<div class="panel panel-default">
+						<div class="panel-heading">Events</div>
+						<div class="panel-body">
+							<h2>{{character.events.available | number}}</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h4>More info</h4>
+			<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				<div class="btn-group" role="group" aria-label="..." ng-repeat="link in character.urls">
+					<a ng-href="{{link.url}}" target="_blank" role="button" class="btn btn-primary">{{link.type}}</a>
+				</div>
+			</div>
+			<p class="margin-top-l">{{attribution}} via <a href="https://developer.marvel.com">Official API</a></p>
+		</div>
+	</div>
+</div>

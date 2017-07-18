@@ -1,0 +1,31 @@
+<div class="container-fluid">
+	<div class="row page__tools">
+		<div class="col-xs-12">
+			<p>Displayed {{limit}} results on {{total_items}} starting from {{offset}}</p>
+			<p>Page: {{current_page}} / {{total_pages}}</p>
+			<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-primary" ng-click="goBack(current_page)">Previous</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-primary" ng-click="goForward(current_page)">Next</button>
+				</div>
+			</div>
+			<rzslider id ="page_slider"
+				rz-slider-model="slider.value"
+         		rz-slider-options="slider.options"></rzslider>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3 col-sm-3 col-md-2" ng-repeat="comic in comics">
+			<div class="panel panel-default" id="comic-{{comic.id}}">
+				<div class="panel-heading"><strong>{{comic.title}}</strong></div>
+				<div class="panel-body">
+					<img class="img-responsive" ng-src="{{comic.thumbnail.path}}/portrait_uncanny.{{comic.thumbnail.extension}}" ng-alt="{{comic.name}}">
+				</div>
+				<div class="panel-footer"><a ng-href="/angular/#!/comics/{{comic.id}}">Details</a></div>
+			</div>
+		</div>
+		<div class="col-xs-12"><p>{{attribution}} via <a href="https://developer.marvel.com">Official API</a></p></div>
+	</div>
+</div>
