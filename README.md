@@ -1,11 +1,12 @@
 # AngularJS & Marvel Api
 
-I needed to make some practice with AngularJS and API. I wanted to create a simple app which get JSON data from an API response and structure the view to show multiple objects (index) or a single object (detail).
+I did some practice with AngularJS and API. I wanted to create a simple app which get JSON data from an API response and structure the view to show multiple objects (index) or a single object (detail).
 
 ### Marvel API
 
 I started to work woth the Marvel API. [Take a look](https://developer.marvel.com/).
-I have developer my application using only to the Characters and the Comics endpoints.
+
+I have developed my application using only the Characters (both for index and detail page) and the Comics endpoints (only for index).
 
 ### Getting data
 
@@ -70,7 +71,7 @@ function composeUrl(destination, offset, limit, id) {
 
 ## Author
 
-* **Giuseppe Garbin** - *Web Marketing Specialist @ Garmin* - [Visit my website](https://www.giuseppegarbin.com)
+**Giuseppe Garbin** - *Web Marketing Specialist @ Garmin* - [Visit my website](https://www.giuseppegarbin.com)
 
 ## License
 
